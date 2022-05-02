@@ -25,10 +25,11 @@ export const getChildren = cacheFn(async (dir: string) => {
 	}
 });
 
-export const multilineCommentRegex = /[^\n]\*[^*]*\*+(?:[^/*][^*]*\*+)*[^\n]*/g;
+export const multilineCommentRegex =
+	/[^\n]*\/\*[^*]*\*+(?:[^/*][^*]*\*+)*\/[^\n]*/g;
 
 export function multilineCommentReplacer(substr: string) {
-	const match = substr.match(/\*[^*]*\*+(?:[^/*][^*]*\*+)*/);
+	const match = substr.match(/\/\*[^*]*\*+(?:[^/*][^*]*\*+)*\//);
 
 	const comment = match ? match[0] : '';
 
