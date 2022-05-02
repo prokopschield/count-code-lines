@@ -1,0 +1,35 @@
+{
+	"name": "count-code-lines",
+	"description": "Counts lines of code.",
+	"version": "0.1.0-1",
+	"main": "lib/index.js",
+	"bin": {
+		"count-code-lines": "lib/cli.js"
+	},
+	"scripts": {
+		"start": "node lib/cli",
+		"test": "npx nslibmgr test"
+	},
+	"author": "Prokop Schield",
+	"dependencies": {
+		"@prokopschield/argv": "^0.1.0-2",
+		"ps-std": "^0.1.1"
+	},
+	"devDependencies": {
+		"@types/node": ">=14"
+	},
+	"keywords": [],
+	"license": "GPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/prokopschield/count-code-lines.git"
+	},
+	"bugs": {
+		"url": "https://github.com/prokopschield/count-code-lines/issues"
+	},
+	"homepage": "https://github.com/prokopschield/count-code-lines#readme",
+	"directories": {
+		"lib": "lib"
+	},
+	"types": "./lib/index.d.ts"
+}
